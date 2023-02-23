@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #212121;
+    color: #fff;
+    height: 100%;
+}
+
+/* .dark-mode{
+    background-color: #fff;
+    color: #000;
+}
+.dark-mode nav{
+    background-color: #fff;
+}
+
+.dark-mode form button{
+    background-color: #fff;
+} */
+.home {
+    height: 80vh;
+}
+
+.container-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #212121;
+    
+}
+
+.navbar-logo {
+    padding: 20px;
+    padding-left: 70px;
+    font-size: 25px;
+    font-weight: bolder;
+    width: 30px;
+    margin-left: 0px;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    /* padding: 20px; */
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 50px;
+    
+}
+
+.navbar-list li:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.25rem;
+    text-decoration-color: #0bc9ec;
+    cursor: pointer;
+    
+}
+
+.navbar-list li {
+    /* padding-right: 20px; */
+    margin-right: 20px;
+    
+}
+
+.intro {
+    margin: 175px 70px;
+    font-family: 'Poppins', sans-serif;
+    flex: 1;
+    overflow: auto;
+
+}
+
+.intro h1,
+h2 {
+    font-size: 60px;
+}
+
+.intro span {
+    color: #0bc9ec;
+}
+
+.intro p {
+    overflow-wrap: normal;
+    width: 50%;
+    font-size: 16px;
+    color: #555
+}
+
+.intro form button {
+    padding: 10px 70px;
+    margin-top: 60px;
+    border-color: rgb(11, 201, 236);
+    border-style: solid;
+    background-color: #212121;
+    color: rgb(11, 201, 236);
+    font-size: 20px;
+    box-shadow: rgba(11, 201, 236, 0.24) 0px 3px 8px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    border-radius: 8px;
+    transition: 0.5s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s all;
+    margin-right: 30px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+
+    
+}
+
+.intro form button:hover {
+    border-color: #0bc9ec;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: rgba(11, 201, 236, 1) 0 3px 8px;
+    background-color: rgb(11, 201, 236, 1);
+    transform: scale(0.98);
+
+    /* Scaling button to 0.98 to its original size */
+    /* Lowering the shadow */
+    
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.about-container {
+    height: 100vh;
+    flex: 1;
+    overflow: auto;
+}
+
+.about {
+    margin-left: 70px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+
+.about p{
+    width: 80%;
+    color: #555;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about img{
+    width: 250px;
+    /* border: 2px solid; */
+    border-color: #0bc9ec;
+    margin-right: 70px;
+    border: 2px solid  #0bc9ec;
+    border-radius: 5px;
+    transform: scaleX(-1);
+    z-index: -1;
+    box-shadow: rgba(11, 201, 236, 0.24) 0px 3px 8px;
+}
+
+.container:hover{
+}
+
+.about-intro h2{
+    width: 70%;
+}
+
+.toggle {
+    --width: 80px;
+    --height: calc(var(--width) / 3);
+
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+}
+
+/* hiding checkbox */
+.toggle input {
+    display: none;
+}
+
+.toggle .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: #ccc;
+    transition: all 0.4s ease-in-out;
+}
+.toggle .slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Adding slider effect */
+.toggle input:checked + .slider {
+    background-color: #2196F3;
+}
+.toggle input:checked + .slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #212121;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #555;
+    /* creates padding around scroll thumb */
+}
